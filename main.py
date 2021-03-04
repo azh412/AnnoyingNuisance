@@ -43,4 +43,7 @@ async def on_message(message):
     unoindex = words.index("uno")
     if words[unoindex + 1] == 'reverse':
       await message.channel.send("https://tenor.com/view/uno-reverse-allcolor-reverse-card-gif-13843660")
+
+  if "shut" in words:
+    await message.channel.send("https://tenor.com/view/shut-up-shush-shh-ok-bird-gif-17679708")
 client.run(os.getenv("token"))
