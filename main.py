@@ -31,4 +31,9 @@ async def on_message(message):
 
   if "bruh" in words:
     await message.channel.send("BRUHHHHHHHHH xD")
+
+  if "annoying" in words:
+    await message.channel.send("Someone call for me? xD")
+  
+  
 client.run(os.getenv("token"))
