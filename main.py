@@ -11,7 +11,7 @@ async def on_ready():
 async def on_message(message):
   if message.author == client.user:
     return
-  mes = message.content
+  mes = message.content.lower()
   words = mes.split()
   if "i'm".lower() in words:
     index = words.index("i'm".lower())
@@ -22,6 +22,9 @@ async def on_message(message):
       realname += " "
     realname2 = realname[:-1]
     realname2 += '"'
-    await message.channel.send(f"Hello {realname2}, I'm {client.user}! :)")
+    await message.channel.send(f"Hello {realname2}, I'm {client.user[:client.user.index("#")]}! xD")
+
+  if "lol" in words:
+    await message.channel.send(f"LOLOLOLOLOLOL xD")
 
 client.run(os.getenv("token"))
