@@ -56,7 +56,7 @@ async def on_message(message):
   elif "gotem" in words and curtailment == False:
     await message.channel.send("https://tenor.com/view/gotword-deeznuts-gottem-deez-nuts-gif-4394929")
 
-  if "iaFGHJBADFGUAGYEDHJKGUYSFDJHAV" in words:
+  if "iaFGHJBADFGUAGYEDHJKGUYSFDJHAV".lower() in words:
     if curtailment == False:
       curtailment = True
     else:
