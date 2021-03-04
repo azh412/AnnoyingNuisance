@@ -35,5 +35,12 @@ async def on_message(message):
   if "annoying" in words:
     await message.channel.send("Someone call for me? xD")
   
-  
+  if "no" in words:
+    noindex = words.index("no")
+    if words[noindex + 1] == "u" or words[noindex + 1] == "you":
+      await message.channel.send("https://tenor.com/view/roasted-oh-shookt-gif-8269968")
+  if "uno" in words:
+    unoindex = words.index("uno")
+    if words[unoindex + 1] == 'reverse':
+      await message.channel.send("https://tenor.com/view/uno-reverse-allcolor-reverse-card-gif-13843660")
 client.run(os.getenv("token"))
