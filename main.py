@@ -22,7 +22,7 @@ async def on_message(message):
       realname += " "
     realname2 = realname[:-1]
     realname2 += '"'
-    await message.channel.send(f"Hello {realname2}, I'm {client.user}! :)")
+    await message.channel.send(f"Hello {realname2}, I'm {client.user}! xD")
   if "lol" in words:
     await message.channel.send("LOLOLOLOLOLOL xD")
 
