@@ -46,4 +46,12 @@ async def on_message(message):
 
   if "shut" in words:
     await message.channel.send("https://tenor.com/view/shut-up-shush-shh-ok-bird-gif-17679708")
+  if "got" in words:
+    gotindex = words.index("got")
+    if words[gotindex + 1] == 'em' or words[gotindex + 1] == 'them':
+      await message.channel.send("https://tenor.com/view/gotword-deeznuts-gottem-deez-nuts-gif-4394929")
+  elif "gottem" in words:
+    await message.channel.send("https://tenor.com/view/gotword-deeznuts-gottem-deez-nuts-gif-4394929")
+  elif "gotem" in words:
+    await message.channel.send("https://tenor.com/view/gotword-deeznuts-gottem-deez-nuts-gif-4394929")
 client.run(os.getenv("token"))
