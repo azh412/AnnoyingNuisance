@@ -56,4 +56,10 @@ async def on_message(message):
     await message.channel.send("https://tenor.com/view/gotword-deeznuts-gottem-deez-nuts-gif-4394929")
   if "noob" in words:
     await message.channel.send("NOOOOOOOOOBBBBBBBB LOLOLOL xD")
+  if "hate" in words:
+    await message.channel.send("i hate u")
+    await message.channel.send("https://tenor.com/view/roasted-oh-shookt-gif-8269968")
+  if "look" in words:
+    await message.channel.send("no u")
+    await message.channel.send("https://tenor.com/view/roasted-oh-shookt-gif-8269968")
 client.run(os.getenv("token"))
