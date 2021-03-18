@@ -3,7 +3,8 @@
 
 import discord
 import os
-
+import nltk
+nltk.download('punkt')
 client = discord.Client()
 
 @client.event
@@ -15,7 +16,7 @@ async def on_message(message):
   if message.author == client.user:
     return
   mes = message.content.lower()
-  words = mes.split()
+  words = nltk.word_tokenize(mes)
   if "i'm".lower() in words :
     index = words.index("i'm".lower())
     name = words[index+1:]
@@ -65,4 +66,15 @@ async def on_message(message):
   if "look" in words:
     await message.channel.send("no u")
     await message.channel.send("https://tenor.com/view/roasted-oh-shookt-gif-8269968")
+  if f"816855127486234644" in words:
+    for i in range(20):
+      await message.channel.send(message.author.mention)
+  if "-_-" in words:
+    await message.channel.send("-_____________- xD")
+  if "yay" in words:
+    await message.channel.send("YAYAYAYAYAYAYAYAYAYAYAYAY xD")
+  if "yes" in words:
+    await message.channel.send("no")
+  if "no" in words:
+    await message.channel.send("yes")
 client.run(os.getenv("token"))
