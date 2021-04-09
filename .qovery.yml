@@ -1,0 +1,11 @@
+---
+application:
+  name: "annoyingnuisance"
+  project: "discord-bot-annoy"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-annoyingnuisance"
+  routes:
+  - application_name: "annoyingnuisance"
+    paths:
+    - "/*"
